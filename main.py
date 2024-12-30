@@ -182,8 +182,12 @@ def main():
                                    silence_duration=SILENCE_DURATION*1000, 
                                    threshold=threshold, 
                                    samplerate=fs,file="1.wav")
-    print(recording_to_text("1.wav"))
-    print(speaker.transcribe_with_speakers(r"C:\Users\Danny\files\1.wav",model))
+    value_spoken=speaker.transcribe_with_speakers(r"C:\Users\Danny\files\1.wav",model)
+
+    for segment in value_spoken:
+        print(segment['text'])
+
+
 
 
 if __name__ == "__main__":

@@ -40,10 +40,7 @@ def transcribe_with_speakers(audio_path,model=None):
     
     # Process segments with speaker information
 
-        
-        # Find corresponding transcription
-    for segment in result["segments"]:
-        print(segment)
+
     
     return result["segments"]
 
